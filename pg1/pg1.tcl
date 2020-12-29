@@ -1,11 +1,11 @@
 set ns [new Simulator]
-set nf [open out.nam w]
+set nf [open pg1.nam w]
 $ns namtrace-all $nf
 proc finish {} {
     global ns nf
     $ns flush-trace
     close $nf
-    exec nam out.nam &
+    exec nam pg1.nam &
     exit 0
 }
 set n0 [$ns node]
